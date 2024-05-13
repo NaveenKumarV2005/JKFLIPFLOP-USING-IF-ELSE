@@ -12,6 +12,18 @@ Quartus prime
 
 **JK Flip-Flop**
 
+JK flip-flop is the modifie**AIM:** 
+
+To implement  JK flipflop using verilog and validating their functionality using their functional tables
+
+**SOFTWARE REQUIRED:**
+
+Quartus prime
+
+**THEORY**
+
+**JK Flip-Flop**
+
 JK flip-flop is the modified version of SR flip-flop. It operates with only positive clock transitions or negative clock transitions. The circuit diagram of JK flip-flop is shown in the following figure.
 
 ![image](https://github.com/naavaneetha/JKFLIPFLOP-USING-IF-ELSE/assets/154305477/a649c30b-232b-4558-b188-fd6c09845180)
@@ -38,11 +50,50 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+Developed by: Naveen Kumar V
+RegisterNumber: 212223220068
 */
+~~~
+module JKFLIPFLOP(q, qb,j,k,clock,reset);
+   input j,k,clock,reset;
+   output reg q, qb;
+    
+always @ (posedge (clock))
 
+   begin 
+       if (!reset)
+           begin
+              q <= q;
+              qb <=qb;
+           end   
+       
+else
+  begin
+      if(j==0 && k==0)
+   	   begin
+   		q<=q;
+   		qb<=qb;
+   		end
+   	else if(j!=k)
+   	   begin
+   		q<=j;
+   		qb<=k;
+   		end
+   	else if(j==1 && k==1)
+   	    begin
+   		 q<=~q;
+   		 qb<=~qb;
+   		 end
+   end
+end	
+endmodule
+~~~
 **RTL LOGIC FOR FLIPFLOPS**
+![329509986-aca73eb9-06f3-4222-a0d1-b38b255cda79](https://github.com/04Varsha/JKFLIPFLOP-USING-IF-ELSE/assets/149035374/84cbcf9e-13f5-4361-b2ad-63c0b85495a0)
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+![329510034-0a74f945-4fec-4ed7-be03-c2bdfffbd4b7](https://github.com/04Varsha/JKFLIPFLOP-USING-IF-ELSE/assets/149035374/7282ba99-6907-4725-b503-ee51aef5f48f)
 
 **RESULTS**
+Therefore the code has been successfully executed.

@@ -12,18 +12,6 @@ Quartus prime
 
 **JK Flip-Flop**
 
-JK flip-flop is the modifie**AIM:** 
-
-To implement  JK flipflop using verilog and validating their functionality using their functional tables
-
-**SOFTWARE REQUIRED:**
-
-Quartus prime
-
-**THEORY**
-
-**JK Flip-Flop**
-
 JK flip-flop is the modified version of SR flip-flop. It operates with only positive clock transitions or negative clock transitions. The circuit diagram of JK flip-flop is shown in the following figure.
 
 ![image](https://github.com/naavaneetha/JKFLIPFLOP-USING-IF-ELSE/assets/154305477/a649c30b-232b-4558-b188-fd6c09845180)
